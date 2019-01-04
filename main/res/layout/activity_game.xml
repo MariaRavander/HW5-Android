@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <EditText
+        android:id="@+id/editUsername"
+        android:layout_width="268dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/username"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:onClick="sendUsername"
+        android:text="OK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="sendJoin"
+        android:text="@string/button_join"
+        app:layout_constraintBottom_toTopOf="@+id/gameHistory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.628" />
+
+    <Button
+        android:id="@+id/button_rock"
+        android:layout_width="73dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="sendPlay"
+        android:tag="@string/button_rock"
+        android:text="@string/button_rock"
+        app:layout_constraintBottom_toTopOf="@+id/gameHistory"
+        app:layout_constraintEnd_toStartOf="@+id/button_paper"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editUsername"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <Button
+        android:id="@+id/button_paper"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="240dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="sendPlay"
+        android:tag="@string/button_paper"
+        android:text="@string/button_paper"
+        app:layout_constraintBottom_toTopOf="@+id/gameHistory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editUsername"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button_scissor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="sendPlay"
+        android:tag="@string/button_scissor"
+        android:text="@string/button_scissor"
+        app:layout_constraintBottom_toTopOf="@+id/gameHistory"
+        app:layout_constraintEnd_toStartOf="@+id/button_join"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toEndOf="@+id/button_paper"
+        app:layout_constraintTop_toBottomOf="@+id/editUsername"
+        app:layout_constraintVertical_bias="0.043" />
+    <TextView
+        android:id="@+id/gameHistory"
+        android:layout_width="382dp"
+        android:layout_height="439dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbars="vertical"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="bottom"
+        />
+</android.support.constraint.ConstraintLayout>
